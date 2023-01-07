@@ -1,0 +1,1 @@
+allSmallContainer = document.querySelectorAll(".result");
