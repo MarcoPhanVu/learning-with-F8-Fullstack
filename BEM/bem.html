@@ -7,12 +7,25 @@
     <title>learning BEM with F8</title>
 
     <!-- CSS Stylesheet -->
+        <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- fontawesomme kit's code -->
+    <script src="https://kit.fontawesome.com/11e0effb53.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type ="text/css" href="bemStyle.css">
 </head>
 <body>
     <div class="toast">
-        
+        <div class="toast_icon">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="toast_content">
+            <h2 class="toast_title">Color changed</h2>
+            <p class="toast_msg">The color of the box have been changed successfully</p>
+        </div>
+        <i class="fa-solid fa-xmark toast_close"></i>
     </div>
+
     <!-- JS Script(s) -->
     <script src="bemScript.js"></script>
 </body>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400;600&display=swap');
 
 * {
     margin: 0;
@@ -9,44 +10,61 @@
 
 html {
     scroll-behavior: smooth;
-    /* scroll-padding-top: 120px; */
 }
 
 :root {
-    --color1: #E7A657;
-    --color2: #DC9B4D;
-    --color3: #91582E;
-    --color4: #553418;
 
-    --idk1: rgb(252, 232, 167);
-
-    --memList-color: rgb(255, 233, 206);
-
-    --mainBG-color: rgb(255, 250, 241);
 }
 
 body {
-    padding: 36px;
+    padding: 12px;
 }
 
-.main-container {    
-    background-color: rgb(252, 216, 216);
-    padding: 36px;
+.toast {
+    position: absolute;
+    /* background-color: bisque; */
+    right: 12px;
+    width: 400px;
+    height: 80px;
     display: flex;
-    justify-content: space-evenly;
-    column-gap: 36px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 16px;
+    padding: 4px 16px;
+    box-shadow: 0px 0px 10px #00000038;
+    border-left: solid 6px rgb(90, 200, 90);
 }
 
-.panel {
-    background-color: rgb(252, 167, 127);
-    flex: 1;
-    padding: 24px;
-    display: flex;
-    row-gap: 24px;
-    flex-direction: column;
+.toast_icon {
+    display: inline-block;
+    font-size: 36px;
+    color: rgb(90, 200, 90);
+    /* flex: 1; */
+    text-align: center;
+    /* background-color: rgb(149, 248, 232); */
 }
 
-.sub-container {
-    background-color: rgb(252, 230, 169);
-    padding: 24px;
+.toast_content {
+    display: inline-block;
+    /* background-color: rgb(219, 141, 178); */
+    /* flex: 5; */
+}
+
+.toast_title {
+    font-size: 20px;
+}
+
+.toast_msg {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.toast_close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 4px 6px;
+    font-size: 16px;
+    /* background-color: burlywood; */
+    cursor: pointer;
 }
