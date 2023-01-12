@@ -37,10 +37,16 @@ body {
     cursor: pointer;
     transition: 300ms ease-in-out;
 }
+
 .toast:hover {
     background-color: rgb(255, 255, 255);
     border-left: solid 8px rgb(100, 210, 100);
 }
+
+.toast:active {
+    
+}
+
 .toast_icon {
     display: inline-block;
     font-size: 36px;
