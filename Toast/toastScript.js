@@ -1,9 +1,11 @@
-let textArea0 = document.querySelector("#textKeepingZone");
+// let textArea0 = document.querySelector("#textKeepingZone");
 
-function checkForText() {
-    console.log(textArea0);
-} 
+// function checkForText() {
+//     console.log(textArea0);
+// } 
 
-textArea0.addEventListener("input", (ev) => {
-    console.log(ev.target.value);
-})
+// textArea0.addEventListener("input", (ev) => {
+//     console.log(ev.target.value);
+// })
+
+
