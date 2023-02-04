@@ -15,18 +15,8 @@
     <link rel="stylesheet" type ="text/css" href="toastStyle.css">
 </head>
 <body>
-    <div class="toast-container">
-        <div class="toast toast-success">
-            <div class="toast_icon">
-                <i class="fa-solid fa-circle-check"></i>
-            </div>
-            <div class="toast_content">
-                <h2 class="toast_title">Completed</h2>
-                <p class="toast_msg">The color of the character have been changed successfully.</p>
-            </div>
-m        </div>
-    
-        <div class="toast toast-warning">
+    <div id="toast-container">
+        <!-- <div class="toast toast-warning">
             <div class="toast_icon">
                 <i class="fa-solid fa-triangle-exclamation"></i>
             </div>
@@ -35,20 +25,17 @@ m        </div>
                 <p class="toast_msg">This color has been selected by another player, please choose another color.</p>
             </div>
             <i class="fa-solid fa-xmark toast_close"></i>
-        </div>
-    
-        <div class="toast toast-info">
-            <div class="toast_icon">
-                <i class="fa-solid fa-circle-info"></i>
-            </div>
-            <div class="toast_content">
-                <h2 class="toast_title">Info</h2>
-                <p class="toast_msg">There is currently 4 players in this lobby.</p>
-            </div>
-            <i class="fa-solid fa-xmark toast_close"></i>
-        </div>
+        </div> -->
     </div>
-    <!-- <textarea name="Test" id="textKeepingZone" cols="30" rows="10"></textarea> -->
+    
+    <div id="button-list">
+        <button onclick="showSuccessToast()">Success Toast</button>
+        <button onclick="showWarningToast()">Warning Toast</button>
+        <button onclick="showInformToast()">Info Toast</button>
+        <button onclick="toggleToastContColor()">Toggle</button>
+    </div>
+    
+
 
     <!-- JS Script(s) -->
     <script src="toastScript.js"></script>
