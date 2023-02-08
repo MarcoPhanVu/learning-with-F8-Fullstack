@@ -31,10 +31,10 @@ body {
 
 .main-container {    
     background-color: rgb(252, 216, 216);
-    padding: 36px;
+    padding: 24px;
     display: flex;
     justify-content: space-evenly;
-    column-gap: 36px;
+    column-gap: 24px;
 }
 
 .panel {
@@ -44,9 +44,28 @@ body {
     display: flex;
     row-gap: 24px;
     flex-direction: column;
+    transition: linear 300ms;
+}
+
+.left {
+    display: none;
 }
 
 .sub-container {
     background-color: rgb(252, 230, 169);
-    padding: 24px;
+    padding: 12px;
+}
+
+.right.panel {
+    padding: 16px;
+}
+
+#button-box {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 240px;
+    text-align: center;
+    background-color: rgb(162, 114, 250);
+    padding: 4px;
 }

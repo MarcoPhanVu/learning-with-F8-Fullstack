@@ -1,11 +1,10 @@
+// ---------------------NAME SEARCHING START---------------------
+
 allSmallContainer = document.querySelectorAll(".result");
 
 const topLeft = document.querySelector("[data-result-1]");
 
 topLeft.innerHTML = "received?";
-
-console.log(topLeft);
-
 
 listNameOnly = [
     "Andy",
@@ -41,9 +40,7 @@ listNameFull = [
 ];
 
 function findName(targetName, listName, method) {
-    console.log(method);
     if (method == "name only") {
-        console.log("reached?");
         for (let i = 0; i < listName.length; i++) {
             if (listName[i] == targetName) {
                 console.log(listName[i] + " is the name that you are looking for");
@@ -53,7 +50,7 @@ function findName(targetName, listName, method) {
     }
 }
 
-findName("Vivian", listNameOnly, "name only");
+// findName("Vivian", listNameOnly, "name only");
 
 // function myFunction() {
 //     var x = document.createElement("SELECT");
@@ -66,6 +63,44 @@ findName("Vivian", listNameOnly, "name only");
 //     z.appendChild(t);
 //     document.getElementById("mySelect").appendChild(z);
 // }
+
+// ---------------------NAME SEARCHING END---------------------
+
+
+
+// ---------------------ANIMATION START---------------------
+const rightPanel = document.querySelector("#rightPanel");
+const buttonBox = document.getElementById("button-box");
+
+
+function createSubContainer() {
+    let newSubC = document.createElement("div");
+    newSubC.className = "sub-container";
+
+    let currentPosition = rightPanel.childElementCount + 1; //Plus 1 because we haven't add that newSub to the DOM yet
+    newSubC.innerHTML = currentPosition;
+    newSubC.setAttribute(`position-${currentPosition}`, "");
+    rightPanel.appendChild(newSubC);
+
+    createButtonToDel(newSubC, rightPanel);
+}
+
+function createButtonToDel(target, fromParent) {
+    let newButton = document.createElement("button");
+    console.log(newButton);
+    newButton.setAttribute("button-destination", target.innerHTML);
+    newButton.innerHTML = "Remove " + (target.innerHTML);
+
+    buttonBox.appendChild(newButton);
+
+    newButton.addEventListener("click", () => {
+        if (target) {
+            fromParent.removeChild(target);
+        }
+    });
+}
+// ---------------------ANIMATION END-----------------------
+
 
 // This shit worked
 // allSmallContainer.forEach(result => {

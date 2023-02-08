@@ -10,6 +10,11 @@
     <link rel="stylesheet" type ="text/css" href="style.css">
 </head>
 <body>
+    <div id="button-box">
+        <button onclick="addSubH()">Add Height</button>
+        <button onclick="lowerSubH()">Reduce Height</button>
+        <button onclick="createSubContainer()">Click here to add more Div</button>
+    </div>
     <div class="main-container">
         <div class="panel left">
             <div class="top sub-container">
@@ -33,14 +38,14 @@
                 <div data-result-2 class="result">The result is</div>
             </div>
         </div>
-        <div class="panel right">
+        <div class="panel right" id="rightPanel">
             <div class="top sub-container">
-                <div class="title">This is for</div>
-                <div data-result-3 class="result">The result is</div>
+                <!-- <div class="title">Position: 1</div> -->
+                <div data-result-3 class="result">Position 1</div>
             </div>
             <div class="bottom sub-container">
-                <div class="title">This is for</div>
-                <div data-result-4 class="result">The result is</div>
+                <!-- <div class="title">This is for</div> -->
+                <div data-result-4 class="result">Position 2</div>
             </div>
         </div>
     </div>
