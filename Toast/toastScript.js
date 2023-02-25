@@ -4,7 +4,7 @@ function showToast({ // Default parameters
     title = "",
     message = "",
     type = "",
-    duration = temporaryDelay + 1
+    duration = 3000
 }) {
     if (toastContainer) {
         let newToast = document.createElement("div");
@@ -36,20 +36,21 @@ function showToast({ // Default parameters
 
         toastContainer.appendChild(newToast);
 
-        setTimeout(function() {
+        setTimeout(() => {
             toastContainer.removeChild(newToast);
-        }, (1 + duration)*1000);
+        }, (duration + 1) * 1000);
+
+        // newToast.classList.add("offsetYUp");
+        newToast.classList.add("backgroundSalmon");
     }
 }
-
-let temporaryDelay = 3;
 
 function showSuccessToast(msg="Player's color has been changed successfully.") {
     showToast({
         title: 'Success',
         message: msg,
         type: "success",
-        duration: temporaryDelay
+        duration: 3
     })
 }
 
@@ -58,7 +59,7 @@ function showWarningToast(msg="This color has been selected by another player, p
         title: 'Warning',
         message: msg,
         type: "warning",
-        duration: temporaryDelay
+        duration: 3
     })
 }
 
@@ -67,19 +68,18 @@ function showInformToast(msg="There is currently 4 players in this lobby.") {
         title: 'Information',
         message: msg,
         type: "inform",
-        duration: temporaryDelay
+        duration: 3
     })
 }
 
 function cycle() {
-    setTimeout(showSuccessToast, (temporaryDelay - 2)*1000);
-    setTimeout(showWarningToast, (temporaryDelay - 1)*1000);
-    setTimeout(showInformToast, (temporaryDelay)*1000);
+    setTimeout(showSuccessToast, (3 - 2)*1000);
+    setTimeout(showWarningToast, (3 - 1)*1000);
+    setTimeout(showInformToast, (3)*1000);
 }
 
-setInterval(cycle, (temporaryDelay)*900);
+setInterval(cycle, (3)*900);
 
 function toggleToastContColor() {
     toastContainer.classList.toggle("backgroundSalmon");
 }
-
